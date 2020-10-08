@@ -1,0 +1,17 @@
+{
+  "name": "oikotie",
+  "version": 2,
+  "alias": "oikotie",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node-server",
+      "config": { "maxLambdaSize": "20mb" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }],
+  "regions": ["bru"],
+  "github": {
+    "silent": true
+  }
+}

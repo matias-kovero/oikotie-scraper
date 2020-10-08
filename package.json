@@ -1,0 +1,19 @@
+{
+  "name": "oikotie-api-scrape",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/matias-kovero/oikotie-api-scrape.git",
+  "author": "Matias Kovero",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "set NODE_ENV=development&& nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },  
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
