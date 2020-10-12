@@ -20,14 +20,15 @@ app.get('/', async (req, res) => {
       offset: isNaN(req.query.offset) ? 0   : req.query.offset,
       sortBy: checkValidSort(req.query.sortBy) ? req.query.sortBy : 'published_sort_desc'
     };
+    
     const data = await fetch(`https://asunnot.oikotie.fi/api/cards?buildingType%5B%5D=1&buildingType%5B%5D=256&cardType=${params.type}&limit=${params.limit}&offset=${params.offset}&sortBy=${params.sortBy}`, {
       "headers": {
         "accept": "application/json",
         "accept-language": "fi-FI,fi;q=0.9,en-US;q=0.8,en;q=0.7",
         "cache-control": "no-cache",
-        "ota-cuid": "ac7fe124016c4bcad423cadf8a6f3928d815883a",                           // Need to review importance
-        "ota-loaded": "1602146001",                                                       // Need to review importance
-        "ota-token": "8fd875196118c6a3586c3bf91b6af0eb3bf9d2f6ade3f3db5d21e3e892dde652",  // Need to review importance
+        "ota-cuid": "06858c2c5a7734006c8eeac013002b6226d15f76",                           // Keeps auth valid!
+        "ota-loaded": "1602486717",                                                       // Keeps auth valid!
+        "ota-token": "c1f864ba7aaecfbc971cda3de51892fe2db6f94b5ea2b4bfb506fc51be53f916",  // Keeps auth valid!
         "pragma": "no-cache",
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
